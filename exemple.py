@@ -29,13 +29,13 @@ def main():
     try:
         api_key = load_api_key()
     except ValueError:
-        print("API key not found in .env file.")
-        api_key = input("Masukkan API key Anda: ")
+        print("API key not found in .env file.\n")
+        api_key = input("\nMasukkan API key Anda: ")
         create_env_file(api_key)
-        print("API key telah disimpan dalam berkas .env")
+        print("\nAPI key telah disimpan dalam berkas .env")
 
     while True:
-        user_input = input("tanya: ")
+        user_input = input(" tanya: ")
 
         if user_input.lower() == 'exit':
             print("\nKoneksi dengan OpenAI terputus, sampai jumpa!\n")
@@ -44,7 +44,7 @@ def main():
         prompt = f"Anda: {user_input}\nSaya:"
         try:
             response = generate_response(prompt, api_key)
-            print("balas:", response + "\n")
+            print(" balas:", response + "\n")
         except openai.error.AuthenticationError as auth_error:
             print("Terjadi kesalahan autentikasi:", auth_error)
             retry = input("Coba masukkan kunci API yang benar lagi? (y/n): ")
