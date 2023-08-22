@@ -29,7 +29,7 @@ def generate_response(prompt, api_key):
     except openai.error.APIConnectionError as error:
         # print(f"Terjadi kesalahan saat berkomunikasi dengan OpenAI: {error}")
         # return "Mohon maaf, terjadi masalah dalam berkomunikasi dengan OpenAI."
-        return "anda sedang offline..."
+        return "mohon maaf, saat ini anda tidak tersambung ke dalam internet coba periksa lagi sambungan internet anda, terimakasih!"
 
 # menjalan program
 def main():
