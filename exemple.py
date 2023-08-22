@@ -60,7 +60,7 @@ def main():
             print("\nProgramming python openai chat gpt.\n- Ketik 'exit' untuk keluar.\n- Ketik 'clear untuk menghapus riwayat.\n")
             continue
 
-        prompt = f" Anda: {user_input}\n Saya:"
+        prompt = f" tanya: {user_input}\n balas:"
 
         try:
             response = generate_response(prompt, api_key)
