@@ -10,7 +10,7 @@ def load_api_key():
         raise ValueError("API key not found in .env file")
     return api_key
 
-#
+# memasang teks api key
 def create_env_file(api_key):
     with open(".env", "w") as env_file:
         env_file.write(f"OPENAI_API_KEY={api_key}")
